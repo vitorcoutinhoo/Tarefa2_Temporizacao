@@ -70,8 +70,6 @@ Após 3 segundos, os LEDs são desligados um por um na ordem: Azul → Vermelho 
 
 O botão fica desativado enquanto os LEDs estão apagando para evitar múltiplas execuções.
 
-O sistema imprime mensagens no terminal indicando o status dos LEDs.
-
 ### Como Compilar e Executar
 
 - Instale o SDK do Raspberry Pi Pico.
