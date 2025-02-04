@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'build/Temp_OneShot.uf2'
+elf = 'build/Temp_OneShot.elf'
