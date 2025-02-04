@@ -64,18 +64,18 @@ int main() {
             sleep_ms(50); // Debouncing simples, espera 50 ms e verifica se o botão continua pressionado
             
             if (gpio_get(BUTTON) == 0 && all_off() && !processing) {
-            processing = true; // Trava o botão de funcionar durante esse processo
-            current = 0; 
-
-            // Liga todos os leds
-            for (int i = 0; i < 3; i++) {
-                gpio_put(leds[i], 1);
-                leds_on[i] = true;
+                processing = true; // Trava o botão de funcionar durante esse processo
+                current = 0; 
+    
+                // Liga todos os leds
+                for (int i = 0; i < 3; i++) {
+                    gpio_put(leds[i], 1);
+                    leds_on[i] = true;
+                }
+    
+                // Chama a função callback
+                add_alarm_in_ms(3000, turn_off_callback, NULL, false);
             }
-
-            // Chama a função callback
-            add_alarm_in_ms(3000, turn_off_callback, NULL, false);
-        }
         }
 
            
